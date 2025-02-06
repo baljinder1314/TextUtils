@@ -59,7 +59,7 @@ export const ComponentContainer = ({ children }) => {
   const handleToggleMode = () => {
     if (mode.backgroundColor === "white") {
       setMode({ backgroundColor: "black", color: "white" });
-      document.body.style.backgroundColor = "#000e2a";
+      document.body.style.backgroundColor = "#003481";
       document.body.style.color = "white";
       setModeText("Enable Light Mode");
       alertMsg("Dark Mode Enabled", "success");

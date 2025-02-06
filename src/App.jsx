@@ -3,6 +3,8 @@ import Header from "./components/Header";
 import { ComponentContainer } from "./store/store";
 import Alert from "./components/Alert";
 import TextForm from "./components/TextForm";
+import { Outlet } from "react-router-dom";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -13,8 +15,9 @@ function App() {
         <Alert />
         </div>
         <div className="container ">
-          <TextForm/>
+          <Outlet />
         </div>
+        <Footer />
       </ComponentContainer>
     </>
   );
