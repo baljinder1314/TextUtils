@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import { stored } from "../store/store";
-import { Link } from "react-router-dom";
 
 function Header(props) {
   const { handleToggleMode,mode,modeText} = useContext(stored);
@@ -8,7 +7,7 @@ function Header(props) {
   return (
     <nav className="navbar navbar-expand-lg sticky-sm-top " style={mode}>
       <div className="container-fluid">
-        <a className="navbar-brand" href="/" style={mode} >
+        <a className="navbar-brand" href="#" style={mode} >
           {title}
         </a>
         <button
@@ -25,7 +24,7 @@ function Header(props) {
         <div className="collapse navbar-collapse " id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="/" style={mode}>
+              <a className="nav-link active" aria-current="page" href="#" style={mode}>
                 {home}
               </a>
             </li>

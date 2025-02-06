@@ -55,7 +55,7 @@ export const ComponentContainer = ({ children }) => {
 
   setInterval(() => {
     setAlert(null);
-  }, 1500);
+  }, 4000);
   const handleToggleMode = () => {
     if (mode.backgroundColor === "white") {
       setMode({ backgroundColor: "black", color: "white" });
