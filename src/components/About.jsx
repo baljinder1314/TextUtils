@@ -4,13 +4,12 @@ import { stored } from "../store/store";
 function About() {
   const { mode } = useContext(stored);
 
-
   return (
     <div className="accordion container my-4 " id="accordionExample">
       <div className="accordion-item">
         <h2 className="accordion-header">
           <button
-            style={ mode }
+            style={mode}
             className="accordion-button"
             type="button"
             data-bs-toggle="collapse"
@@ -18,7 +17,7 @@ function About() {
             aria-expanded="true"
             aria-controls="collapseOne"
           >
-            Why we created it?
+            <strong>Analize your Text</strong>
           </button>
         </h2>
         <div
@@ -26,15 +25,16 @@ function About() {
           className="accordion-collapse collapse show"
           data-bs-parent="#accordionExample"
         >
-          <div className="accordion-body" style={ mode }>
-            Text-Utils.com was born in 2014 as part of a learning exercise to practice our programming skills. In almost 10 years of existence, <strong> we continue to refactor, redesign, improve, and implement new features.</strong> And we could say that we learned a lot since we started, by including the experience here and in the overall development world. As long our spirit allows us to continue learning and coding, we will continue improving this website.
+          <div className="accordion-body" style={mode}>
+            TextUtils gives you a way to analyze your text quickly and
+            efficiently. Be it word Counter, Character Counter
           </div>
         </div>
       </div>
       <div className="accordion-item">
         <h2 className="accordion-header">
           <button
-            style={mode }
+            style={mode}
             className="accordion-button collapsed"
             type="button"
             data-bs-toggle="collapse"
@@ -42,7 +42,7 @@ function About() {
             aria-expanded="false"
             aria-controls="collapseTwo"
           >
-            What does it do?
+            <strong>Free to use</strong>
           </button>
         </h2>
         <div
@@ -50,15 +50,18 @@ function About() {
           className="accordion-collapse collapse"
           data-bs-parent="#accordionExample"
         >
-          <div className="accordion-body" style={ mode }>
-            <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+          <div className="accordion-body" style={mode}>
+            TextUtils is a free Character counter toot that provides instant
+            character counter and word counter statistics for a given text.
+            TextUtils reports the number of words and characters. Thus it is
+            sutable to written text with word / character limit.
           </div>
         </div>
       </div>
       <div className="accordion-item">
         <h2 className="accordion-header">
           <button
-            style={ mode }
+            style={mode}
             className="accordion-button collapsed"
             type="button"
             data-bs-toggle="collapse"
@@ -66,7 +69,7 @@ function About() {
             aria-expanded="false"
             aria-controls="collapseThree"
           >
-            Accordion Item #3
+           <strong> Browser Compatible</strong>
           </button>
         </h2>
         <div
@@ -74,8 +77,8 @@ function About() {
           className="accordion-collapse collapse"
           data-bs-parent="#accordionExample"
         >
-          <div className="accordion-body" style={mode }>
-            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+          <div className="accordion-body" style={mode}>
+            TextUtils works in any web browsers such as Chrome, Firefox, Internet Explorer, Safari, Opera. It suits to count characters in facebook, blog, books, excel document, pdf document, essays, etc.
           </div>
         </div>
       </div>
