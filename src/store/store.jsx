@@ -1,4 +1,3 @@
-
 import { createContext, useReducer, useState } from "react";
 
 export const stored = createContext({
@@ -51,11 +50,11 @@ export const ComponentContainer = ({ children }) => {
       msg: message,
       type: type,
     });
+    setInterval(() => {
+      setAlert(null);
+    }, 1500);
   };
 
-  setInterval(() => {
-    setAlert(null);
-  }, 4000);
   const handleToggleMode = () => {
     if (mode.backgroundColor === "white") {
       setMode({ backgroundColor: "black", color: "white" });
@@ -101,24 +100,23 @@ export const ComponentContainer = ({ children }) => {
     });
     alertMsg("Text cleared", "success");
   };
-  
+
   const handleCopyText = () => {
     let newText = document.querySelector("#floatingTextarea");
     newText.select();
     navigator.clipboard.writeText(newText.value);
     alertMsg("Copy to Clip Board", "success");
   };
-  
+
   const handleLowerCase = () => {
     dispatchText({ type: "TOUPPERCASE" });
     alertMsg("Lowercased", "success");
   };
-  
+
   const handleToRemoveExtraSpaces = () => {
     dispatchText({ type: "REMOVE_EXTRA_SPACES" });
     alertMsg("Removed Extra spaces", "success");
   };
-  
 
   return (
     <stored.Provider

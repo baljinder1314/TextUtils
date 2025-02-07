@@ -71,7 +71,7 @@ function TextForm({ heading }) {
       <div className="container my-4">
         <h3>Your Text Summary</h3>
         <p>
-          {text.split(" ").filter((text) => text !== "").length} Words and{" "}
+          {text.split(/\s+/).filter((text) => text !== "").length} Words and{" "}
           {text.length} Characters{" "}
         </p>
         <p>
